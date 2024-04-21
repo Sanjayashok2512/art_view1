@@ -152,7 +152,6 @@
               v-for="(item, i) in image_dataset"
                   :key="i"
                 cols="12"
-                lg="12"
                 md="4"
                 sm="12"
                 xs="12"
