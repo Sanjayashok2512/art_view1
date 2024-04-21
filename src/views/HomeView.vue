@@ -357,21 +357,19 @@
                 <v-col cols="12" md="12">
                   <v-carousel class="carousel_h" height="150" cycle hide-delimiters>
                     <template v-slot:prev="{ props }">
-                      <i
-                     
-                        style="font-size: 40px; color: #bebebe"
-                        @click="props.onClick"
-                        variant="elevated"
-                        class="fa fa-caret-left slide_icon"
-                      ></i>
+                      <v-img
+                      height="25"
+                      @click="props.onClick"
+                :src="require(`../assets/left.png`)"
+              ></v-img>
                     </template>
+                   
                     <template v-slot:next="{ props }">
-                      <i
-                        style="font-size: 40px; color: #bebebe"
-                        @click="props.onClick"
-                        variant="elevated"
-                        class="fa fa-caret-right slide_icon"
-                      ></i>
+                      <v-img
+                      height="25"
+                      @click="props.onClick"
+                :src="require(`../assets/right.png`)"
+              ></v-img>
                     </template>
                     <v-carousel-item v-for="(item, i) in slide_txt" :key="i">
                       <v-sheet
