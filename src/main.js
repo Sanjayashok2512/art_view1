@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
+// main.js or main.ts
+
+import '@fortawesome/fontawesome-free/css/all.css'
+
 
 loadFonts()
 
