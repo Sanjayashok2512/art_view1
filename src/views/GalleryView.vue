@@ -15,18 +15,23 @@
       class="menu_icon"
       style="
         position: fixed;
+        display: flex;
+        top: 21px;
+        align-items: 
+        center;
         left: 115px;
         z-index: 9999999999;
         transition: opacity 0.3s ease;
       "
     >
-      <i
-        style="font-size: 18px; color: #fff; cursor: pointer"
+    <v-img
+        class="logo"
         @click="menuFunction()"
         @mouseenter="handleMouseEnter"
         @mouseleave="handleMouseLeave"
-        class="fa-solid fa-bars"
-      ></i>
+                style="width: 40% "
+                :src="require(`../assets/menus.png`)"
+              ></v-img>
       <span
         @mouseenter="handleMouseEnter"
         @mouseleave="handleMouseLeave"

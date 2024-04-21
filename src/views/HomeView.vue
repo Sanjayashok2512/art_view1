@@ -5,7 +5,7 @@
       class="menu_icon"
       style="
         position: fixed;
-      
+        display: flex;
         left: 115px;
         z-index: 9999999999 !important;
         transition: opacity 0.3s ease;
@@ -13,13 +13,19 @@
        :style=" {top: menu_margin,
        }"
     >
-      <i
+      <!-- <i
         style="font-size: 18px; color: #fff; cursor: pointer"
+       
+       
+      ></i> -->
+      <v-img
+        class="logo"
         @click="menuFunction()"
         @mouseenter="handleMouseEnter"
         @mouseleave="handleMouseLeave"
-        class="fa-solid fa-bars"
-      ></i>
+                style="width: 40% "
+                :src="require(`../assets/menus.png`)"
+              ></v-img>
       <span
         @mouseenter="handleMouseEnter"
         @mouseleave="handleMouseLeave"
@@ -373,22 +379,49 @@
                         style="
                           display: flex;
                           align-items: flex-start;
-                          justify-content: center;
+                          justify-content: center !important;
                         "
                       >
-                        <div style="max-width: 646px">
+                        <div style="max-width: 646px;  display: flex;
+                        flex-direction: column;
+                         align-items:  center;">
                           <p style="text-align: center; color: #0009; line-height: 1.6; font-size: 15px;">{{ item.txt }}</p>
                           <div
-                        
+                          class="star"
                             style="
+                            width:25%;
                               display: flex;
                               justify-content: center;
                               align-items: center; padding: 20px
                             "
                           >
-                            <i class="fa fa-star" style="color: rgb(245, 210, 10);"></i><i class="fa fa-star" style="color: rgb(245, 210, 10);"></i
-                            ><i class="fa fa-star" style="color: rgb(245, 210, 10);"></i><i class="fa fa-star" style="color: rgb(245, 210, 10);"></i
-                            ><i class="fa fa-star" style="color: rgb(245, 210, 10);"></i>
+                            <v-img
+                            
+                              height="15"
+                              style="border-radius: 50%"
+                              :src="require(`../assets/star.png`)"
+                            ></v-img>
+                            <v-img
+                              height="15"
+                              style="border-radius: 50%"
+                              :src="require(`../assets/star.png`)"
+                            ></v-img>
+                            <v-img
+                              height="15"
+                              style="border-radius: 50%"
+                              :src="require(`../assets/star.png`)"
+                            ></v-img>
+                            <v-img
+                              height="15"
+                              style="border-radius: 50%"
+                              :src="require(`../assets/star.png`)"
+                            ></v-img>
+                            <v-img
+                              height="15"
+                              style="border-radius: 50%"
+                              :src="require(`../assets/star.png`)"
+                            ></v-img>
+                           
                           </div>
                           <h6 style="text-align: center; font-size: 16px; font-weight: 500;line-height: 1.3; letter-spacing: 2px">{{ item.name }}</h6>
                         </div>
@@ -709,6 +742,9 @@ export default {
   }
   .carousel_h{
     height: 200px !important;
+  }
+  .star{
+    width: 40% !important;
   }
 }
 
