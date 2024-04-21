@@ -358,14 +358,16 @@
                   <v-carousel class="carousel_h" height="150" cycle hide-delimiters>
                     <template v-slot:prev="{ props }">
                       <v-img
+                      class="arrow_img1"
                       height="25"
                       @click="props.onClick"
                 :src="require(`../assets/left.png`)"
               ></v-img>
                     </template>
-                   
+                    
                     <template v-slot:next="{ props }">
                       <v-img
+                      class="arrow_img2"
                       height="25"
                       @click="props.onClick"
                 :src="require(`../assets/right.png`)"
@@ -703,6 +705,14 @@ export default {
 
 .my-selector {
   font-size: 16px;
+}
+.arrow_img1{
+  position: relative;
+  left: -110px !important;
+}
+.arrow_img2{
+  position: relative;
+  right: -110px !important;
 }
 .v-window__controls {
   align-items: flex-start !important;
