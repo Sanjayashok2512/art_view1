@@ -202,7 +202,7 @@
             >
               CONTACT US
             </h2>
-            <v-btn class="common_btns" size="x-large">Request Qoute</v-btn>
+            <v-btn class="common_btns" size="x-large">Request Quote</v-btn>
           </v-col>
 
           <v-col
